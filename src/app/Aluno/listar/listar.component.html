@@ -1,0 +1,21 @@
+<table class="table table-dark table-striped">
+    <thead>
+        <th>NOSSOS ALUNOS</th>
+
+        <tr>
+            <th>NOME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of alunos; let i = index">
+            <td>{{a.id_aluno}}</td>
+            <td>{{a.nome}}</td>
+            <button class="btn btn-warning" (click)="editarAluno()">Editar</button>
+            <button class="btn btn-danger" (click)="excluirAluno(alunos)">Excluir</button>
+        </tr>
+    </tbody>
+</table>
+
+
+<button class="btn btn-success" (click)="novoAluno()">Novo Aluno</button>
+<router-outlet></router-outlet>
